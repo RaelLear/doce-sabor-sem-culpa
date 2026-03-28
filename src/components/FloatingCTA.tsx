@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const CTA_LINK = "https://pay.sobremesas-zero.descontoagora.site/checkout-white/?add-to-cart=5681";
+const CTA_LINK = "https://ggcheckout.app/checkout/v2/vvGdsvJyn6wBQsx56aQZ";
 
 const FloatingCTA = () => {
   const [show, setShow] = useState(false);

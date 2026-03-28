@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Check, Shield, Zap, Clock } from "lucide-react";
 import { useState, useEffect } from "react";
 
-const CTA_LINK = "https://pay.sobremesas-zero.descontoagora.site/checkout-white/?add-to-cart=5681";
+const CTA_LINK = "https://ggcheckout.app/checkout/v2/vvGdsvJyn6wBQsx56aQZ";
 
 const items = [
   "+300 receitas de sobremesas zero",
@@ -50,7 +50,7 @@ const CountdownTimer = () => {
 
 const PricingSection = () => {
   return (
-    <section id="cta" className="section-padding" style={{ background: "var(--gradient-warm)" }}>
+    <section id="cta" className="section-padding bg-muted">
       <div className="max-w-xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -70,17 +70,15 @@ const PricingSection = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="bg-card rounded-3xl p-8 md:p-10 border-2 border-primary/30 relative overflow-hidden"
+          className="bg-card rounded-3xl p-8 md:p-10 border border-border relative overflow-hidden"
           style={{ boxShadow: "var(--shadow-soft)" }}
         >
-          {/* Corner ribbon */}
           <div className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs font-bold px-8 py-1 rotate-45 translate-x-6 -translate-y-1">
             OFERTA
           </div>
 
           <CountdownTimer />
 
-          {/* Price */}
           <div className="text-center mb-8">
             <span className="price-old">DE R$ 97,00</span>
             <div className="mt-2">
@@ -89,19 +87,17 @@ const PricingSection = () => {
             </div>
           </div>
 
-          {/* Items */}
           <ul className="space-y-3 mb-8">
             {items.map((item, i) => (
               <li key={i} className="flex items-center gap-3">
                 <div className="flex-shrink-0 w-6 h-6 rounded-md bg-primary/10 flex items-center justify-center">
                   <Check className="w-4 h-4 text-primary" />
                 </div>
-                <span className="font-medium text-sm">{item}</span>
+                <span className="font-medium">{item}</span>
               </li>
             ))}
           </ul>
 
-          {/* CTA */}
           <a href={CTA_LINK} className="cta-button w-full text-center animate-pulse-glow block">
             QUERO APROVEITAR O DESCONTO →
           </a>
@@ -110,7 +106,6 @@ const PricingSection = () => {
             ⚡ SOMENTE HOJE * Acesso imediato após a compra
           </p>
 
-          {/* Trust badges */}
           <div className="flex items-center justify-center gap-6 mt-6 pt-6 border-t border-border">
             <div className="flex items-center gap-1 text-muted-foreground text-xs">
               <Shield className="w-4 h-4" />

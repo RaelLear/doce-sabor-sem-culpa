@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Check, Target, Heart, Scale, Baby, Sparkles, ChefHat, ShieldCheck } from "lucide-react";
 
-const CTA_LINK = "https://pay.sobremesas-zero.descontoagora.site/checkout-white/?add-to-cart=5681";
+const CTA_LINK = "https://ggcheckout.app/checkout/v2/vvGdsvJyn6wBQsx56aQZ";
 
 const benefits = [
   { icon: Target, text: "Controlar a compulsão por açúcar" },
@@ -34,9 +34,8 @@ const advantages = [
 
 const BenefitsSection = () => {
   return (
-    <section className="section-padding" style={{ background: "var(--gradient-warm)" }}>
+    <section className="section-padding bg-muted">
       <div className="max-w-5xl mx-auto">
-        {/* Benefits list */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,19 +53,18 @@ const BenefitsSection = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="flex items-start gap-3 p-4 rounded-xl bg-card"
+                className="flex items-start gap-4 p-5 rounded-xl bg-card"
                 style={{ boxShadow: "var(--shadow-card)" }}
               >
                 <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                   <b.icon className="w-5 h-5 text-primary" />
                 </div>
-                <p className="text-foreground font-medium text-sm leading-relaxed">{b.text}</p>
+                <p className="text-foreground font-medium leading-relaxed">{b.text}</p>
               </motion.div>
             ))}
           </div>
         </motion.div>
 
-        {/* For you + Advantages */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -79,7 +77,7 @@ const BenefitsSection = () => {
               {forYou.map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-secondary-foreground/90">
                   <span className="text-lg">👉</span>
-                  <span className="font-medium text-sm">{item}</span>
+                  <span className="font-medium">{item}</span>
                 </li>
               ))}
             </ul>
@@ -90,14 +88,14 @@ const BenefitsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="bg-card rounded-2xl p-6 md:p-8 border border-primary/20"
+            className="bg-card rounded-2xl p-6 md:p-8 border border-border"
           >
             <h3 className="text-2xl font-black mb-6">Olha as vantagens:</h3>
             <ul className="space-y-3">
               {advantages.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="font-medium text-sm">{item}</span>
+                  <span className="font-medium">{item}</span>
                 </li>
               ))}
             </ul>

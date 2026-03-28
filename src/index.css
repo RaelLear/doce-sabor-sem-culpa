@@ -2,18 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap');
 
 @layer base {
   :root {
-    --background: 30 25% 96%;
-    --foreground: 20 40% 12%;
+    --background: 0 0% 99%;
+    --foreground: 20 20% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 20 40% 12%;
+    --card-foreground: 20 20% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 20 40% 12%;
+    --popover-foreground: 20 20% 20%;
 
     --primary: 352 96% 68%;
     --primary-foreground: 0 0% 100%;
@@ -21,8 +21,8 @@
     --secondary: 20 55% 16%;
     --secondary-foreground: 30 25% 96%;
 
-    --muted: 30 20% 90%;
-    --muted-foreground: 20 15% 45%;
+    --muted: 30 15% 95%;
+    --muted-foreground: 20 10% 50%;
 
     --accent: 40 80% 55%;
     --accent-foreground: 20 40% 12%;
@@ -30,18 +30,18 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 30 20% 88%;
-    --input: 30 20% 88%;
+    --border: 30 10% 92%;
+    --input: 30 10% 92%;
     --ring: 352 96% 68%;
 
     --radius: 0.75rem;
 
-    --gradient-hero: linear-gradient(135deg, hsl(20 55% 16%) 0%, hsl(20 40% 22%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(30 20% 97%) 0%, hsl(30 15% 94%) 100%);
     --gradient-cta: linear-gradient(135deg, hsl(352 96% 62%) 0%, hsl(352 96% 72%) 100%);
-    --gradient-warm: linear-gradient(180deg, hsl(30 25% 96%) 0%, hsl(30 30% 92%) 100%);
-    --shadow-soft: 0 4px 24px -4px hsl(20 55% 16% / 0.1);
-    --shadow-cta: 0 8px 32px -4px hsl(352 96% 68% / 0.4);
-    --shadow-card: 0 2px 16px -2px hsl(20 55% 16% / 0.08);
+    --gradient-warm: linear-gradient(180deg, hsl(0 0% 99%) 0%, hsl(30 15% 96%) 100%);
+    --shadow-soft: 0 4px 24px -4px hsl(20 20% 20% / 0.06);
+    --shadow-cta: 0 8px 32px -4px hsl(352 96% 68% / 0.35);
+    --shadow-card: 0 1px 12px -2px hsl(20 20% 20% / 0.05);
   }
 }
 
@@ -55,7 +55,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+    @apply font-body;
   }
 }
 
@@ -73,7 +73,7 @@
   }
 
   .section-padding {
-    @apply px-4 py-16 md:px-8 md:py-24 lg:py-28;
+    @apply px-5 py-16 md:px-8 md:py-24 lg:py-28;
   }
 
   .badge-zero {
@@ -96,7 +96,7 @@
   }
 
   .price-new {
-    @apply text-5xl md:text-6xl font-display font-black text-primary;
+    @apply text-5xl md:text-6xl font-black text-primary;
   }
 
   .floating-cta {

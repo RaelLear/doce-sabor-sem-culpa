@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { MousePointer, Mail } from "lucide-react";
 
-const CTA_LINK = "https://pay.sobremesas-zero.descontoagora.site/checkout-white/?add-to-cart=5681";
+const CTA_LINK = "https://ggcheckout.app/checkout/v2/vvGdsvJyn6wBQsx56aQZ";
 
 const FinalCTASection = () => {
   return (

@@ -14,7 +14,7 @@ import geleia from "@/assets/images/geleia.jpg";
 import cocada from "@/assets/images/cocada.jpg";
 import quindim from "@/assets/images/quindim.jpg";
 
-const CTA_LINK = "https://pay.sobremesas-zero.descontoagora.site/checkout-white/?add-to-cart=5681";
+const CTA_LINK = "https://ggcheckout.app/checkout/v2/vvGdsvJyn6wBQsx56aQZ";
 
 const recipeCards = [
   { name: "Brownie", img: brownie },
@@ -41,12 +41,11 @@ const RecipeCarousel = () => {
             O que você <span className="text-primary">vai poder comer</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Com ingredientes <strong>acessíveis</strong> e <strong>+ de 300 receitas simples</strong>,
-            qualquer pessoa pode preparar sobremesas deliciosas <strong>sem sair da dieta</strong>.
+            Com ingredientes <strong className="text-foreground">acessíveis</strong> e <strong className="text-foreground">+ de 300 receitas simples</strong>,
+            qualquer pessoa pode preparar sobremesas deliciosas <strong className="text-foreground">sem sair da dieta</strong>.
           </p>
         </motion.div>
 
-        {/* Recipe Cards */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-16">
           {recipeCards.map((recipe, i) => (
             <motion.div
@@ -65,7 +64,7 @@ const RecipeCarousel = () => {
                 />
               </div>
               <div className="p-3 text-center">
-                <h3 className="font-display font-bold text-sm mb-2">{recipe.name}</h3>
+                <h3 className="font-bold text-sm mb-2">{recipe.name}</h3>
                 <div className="flex flex-wrap justify-center gap-1">
                   {["Sem Açúcar", "Sem Lactose", "Sem Glúten"].map(tag => (
                     <span key={tag} className="badge-zero text-[10px]">{tag}</span>
@@ -76,7 +75,6 @@ const RecipeCarousel = () => {
           ))}
         </div>
 
-        {/* Marquee carousels */}
         <div className="space-y-4">
           <h3 className="text-2xl md:text-3xl font-black text-center mb-8">
             Sim! São mais de <span className="text-primary">300 receitas!</span>
@@ -85,7 +83,6 @@ const RecipeCarousel = () => {
             Zero Açúcar, Zero Glúten e Zero Lactose com o sabor das tradicionais!
           </p>
 
-          {/* Row 1 */}
           <div className="relative overflow-hidden">
             <div className="flex gap-4 animate-marquee" style={{ width: "200%" }}>
               {[...carouselRow1, ...carouselRow1].map((img, i) => (
@@ -96,7 +93,6 @@ const RecipeCarousel = () => {
             </div>
           </div>
 
-          {/* Row 2 */}
           <div className="relative overflow-hidden">
             <div className="flex gap-4 animate-marquee-reverse" style={{ width: "200%" }}>
               {[...carouselRow2, ...carouselRow2].map((img, i) => (
@@ -108,7 +104,6 @@ const RecipeCarousel = () => {
           </div>
         </div>
 
-        {/* CTA */}
         <div className="text-center mt-12">
           <a href={CTA_LINK} className="cta-button">
             QUERO APROVEITAR O DESCONTO →

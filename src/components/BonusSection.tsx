@@ -27,7 +27,7 @@ const bonuses = [
 
 const BonusSection = () => {
   return (
-    <section className="section-padding bg-secondary">
+    <section className="section-padding bg-background">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -35,11 +35,11 @@ const BonusSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-4">
             <Gift className="w-4 h-4" />
             <span className="font-bold text-sm">BÔNUS EXCLUSIVOS</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-black text-secondary-foreground">
+          <h2 className="text-3xl md:text-4xl font-black">
             Você ainda <span className="text-primary">ganha + 3 bônus de presente!</span>
           </h2>
         </motion.div>
@@ -52,8 +52,7 @@ const BonusSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className="bg-card rounded-2xl overflow-hidden group"
-              style={{ boxShadow: "var(--shadow-soft)" }}
+              className="bg-card rounded-2xl overflow-hidden group border border-border"
             >
               <div className="aspect-[3/2] overflow-hidden relative">
                 <img
@@ -66,7 +65,7 @@ const BonusSection = () => {
                 </div>
               </div>
               <div className="p-5 text-center">
-                <h3 className="font-display font-bold text-lg mb-1">{bonus.name}</h3>
+                <h3 className="font-bold text-lg mb-1">{bonus.name}</h3>
                 <p className="text-muted-foreground text-sm mb-3">{bonus.description}</p>
                 <div>
                   <span className="price-old text-sm">{bonus.price}</span>
