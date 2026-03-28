@@ -14,8 +14,16 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"Playfair Display"', 'serif'],
         body: ['"DM Sans"', 'sans-serif'],
+      },
+      fontSize: {
+        'base': ['1rem', '1.6'],
+        'lg': ['1.125rem', '1.6'],
+        'xl': ['1.25rem', '1.6'],
+        '2xl': ['1.5rem', '1.4'],
+        '3xl': ['2rem', '1.3'],
+        '4xl': ['2.5rem', '1.2'],
+        '5xl': ['3.25rem', '1.15'],
       },
       colors: {
         border: "hsl(var(--border))",

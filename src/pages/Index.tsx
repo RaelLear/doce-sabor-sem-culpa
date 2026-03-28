@@ -1,3 +1,4 @@
+import TopBar from "@/components/TopBar";
 import HeroSection from "@/components/HeroSection";
 import RecipeCarousel from "@/components/RecipeCarousel";
 import BenefitsSection from "@/components/BenefitsSection";
@@ -10,6 +11,7 @@ import FloatingCTA from "@/components/FloatingCTA";
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <TopBar />
       <HeroSection />
       <RecipeCarousel />
       <BenefitsSection />
