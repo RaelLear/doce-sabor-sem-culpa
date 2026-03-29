@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Check, Shield, Zap, Clock } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useCountdown } from "@/hooks/use-countdown";
 
 const CTA_LINK = "https://ggcheckout.app/checkout/v3/vvGdsvJyn6wBQsx56aQZ";
 
@@ -14,23 +14,7 @@ const items = [
 ];
 
 const CountdownTimer = () => {
-  const [time, setTime] = useState({ hours: 2, minutes: 47, seconds: 33 });
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTime(prev => {
-        let { hours, minutes, seconds } = prev;
-        seconds--;
-        if (seconds < 0) { seconds = 59; minutes--; }
-        if (minutes < 0) { minutes = 59; hours--; }
-        if (hours < 0) { hours = 23; minutes = 59; seconds = 59; }
-        return { hours, minutes, seconds };
-      });
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const pad = (n: number) => String(n).padStart(2, '0');
+  const { time, pad } = useCountdown();
 
   return (
     <div className="flex items-center justify-center gap-2 mb-6">
@@ -118,6 +102,11 @@ const PricingSection = () => {
             </div>
           </div>
         </motion.div>
+
+        {/* Approval bar */}
+        <div className="mt-6 rounded-xl py-3 px-6 text-center font-bold text-white" style={{ backgroundColor: "#16a34a" }}>
+          ⭐ 97% de aprovação
+        </div>
       </div>
     </section>
   );

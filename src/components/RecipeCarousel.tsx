@@ -69,7 +69,7 @@ const RecipeCarousel = () => {
                 <h3 className="font-bold text-sm mb-2">{recipe.name}</h3>
                 <div className="flex flex-wrap justify-center gap-1">
                   {["Sem Açúcar", "Sem Lactose", "Sem Glúten"].map(tag => (
-                    <span key={tag} className="badge-zero text-[10px]">{tag}</span>
+                    <span key={tag} className="badge-zero text-xs">{tag}</span>
                   ))}
                 </div>
               </div>
