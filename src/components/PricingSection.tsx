@@ -80,12 +80,12 @@ const PricingSection = () => {
           <CountdownTimer />
 
           <div className="text-center mb-8">
-            <span className="price-old">DE R$ 37,00</span>
+            <span className="price-old">DE R$ 27,00</span>
             <div className="mt-2">
               <span className="text-muted-foreground text-lg">POR </span>
               <span className="price-new">R$ 10</span>
             </div>
-            <p className="text-sm font-semibold mt-2" style={{ color: "#16a34a" }}>✅ Você economiza R$27,00</p>
+            <p className="text-sm font-semibold mt-2" style={{ color: "#16a34a" }}>✅ Você economiza R$17,00</p>
           </div>
 
           <ul className="space-y-3 mb-8">
