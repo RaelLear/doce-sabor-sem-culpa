@@ -13,7 +13,7 @@ const benefits = [
   { icon: ShieldCheck, text: "Manter uma rotina de alimentação saudável mesmo quando quiser comer um docinho" },
   { icon: Baby, text: "Garantir que seu filho tenha uma alimentação equilibrada enquanto curte os sabores da infância" },
   { icon: Sparkles, text: "Ter sabores inéditos e saudáveis para experimentar por anos" },
-  { icon: ChefHat, text: "Receitas MUITO fáceis de fazer, com ingredientes que todo mundo tem em casa!" },
+  { icon: ChefHat, text: "Não tem muita experiência na cozinha. São receitas MUITO fáceis de fazer, com ingredientes que todo mundo tem em casa!" },
 ];
 
 const forYou = [
