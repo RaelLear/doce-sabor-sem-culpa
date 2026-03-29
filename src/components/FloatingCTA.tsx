@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 
-const CTA_LINK = "https://ggcheckout.app/checkout/v2/vvGdsvJyn6wBQsx56aQZ";
+const scrollToOffer = () => {
+  document.getElementById("oferta-principal")?.scrollIntoView({ behavior: "smooth" });
+};
 
 const FloatingCTA = () => {
   const [show, setShow] = useState(false);
@@ -15,9 +17,9 @@ const FloatingCTA = () => {
 
   return (
     <div className="floating-cta">
-      <a href={CTA_LINK} className="cta-button w-full text-center text-sm py-3">
+      <button onClick={scrollToOffer} className="cta-button w-full text-center text-sm py-3">
         QUERO APROVEITAR O DESCONTO →
-      </a>
+      </button>
     </div>
   );
 };

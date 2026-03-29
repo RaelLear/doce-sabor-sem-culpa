@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { Check, Target, Heart, Scale, Baby, Sparkles, ChefHat, ShieldCheck } from "lucide-react";
 
-const CTA_LINK = "https://ggcheckout.app/checkout/v2/vvGdsvJyn6wBQsx56aQZ";
+const scrollToOffer = () => {
+  document.getElementById("oferta-principal")?.scrollIntoView({ behavior: "smooth" });
+};
 
 const benefits = [
   { icon: Target, text: "Controlar a compulsão por açúcar" },
@@ -103,9 +105,9 @@ const BenefitsSection = () => {
         </div>
 
         <div className="text-center">
-          <a href={CTA_LINK} className="cta-button">
+          <button onClick={scrollToOffer} className="cta-button">
             QUERO APROVEITAR O DESCONTO →
-          </a>
+          </button>
         </div>
       </div>
     </section>

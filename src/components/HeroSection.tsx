@@ -3,7 +3,9 @@ import heroMockup from "@/assets/images/hero-mockup.webp";
 import amandaBallis from "@/assets/images/amanda-ballis.webp";
 import { Star } from "lucide-react";
 
-const CTA_LINK = "https://ggcheckout.app/checkout/v2/vvGdsvJyn6wBQsx56aQZ";
+const scrollToOffer = () => {
+  document.getElementById("oferta-principal")?.scrollIntoView({ behavior: "smooth" });
+};
 
 const HeroSection = () => {
   return (
@@ -86,9 +88,9 @@ const HeroSection = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4 }}
             >
-              <a href={CTA_LINK} className="cta-button animate-pulse-glow text-base md:text-lg">
+              <button onClick={scrollToOffer} className="cta-button animate-pulse-glow text-base md:text-lg">
                 QUERO APROVEITAR O DESCONTO →
-              </a>
+              </button>
               <p className="text-muted-foreground text-xs mt-3">⚡ Acesso imediato • Garantia de 7 dias</p>
             </motion.div>
           </div>

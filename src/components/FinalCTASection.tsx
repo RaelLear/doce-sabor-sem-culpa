@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { MousePointer, Mail } from "lucide-react";
 
-const CTA_LINK = "https://ggcheckout.app/checkout/v2/vvGdsvJyn6wBQsx56aQZ";
+const scrollToOffer = () => {
+  document.getElementById("oferta-principal")?.scrollIntoView({ behavior: "smooth" });
+};
 
 const FinalCTASection = () => {
   return (
@@ -40,9 +42,9 @@ const FinalCTASection = () => {
             </div>
           </div>
 
-          <a href={CTA_LINK} className="cta-button animate-pulse-glow text-lg">
+          <button onClick={scrollToOffer} className="cta-button animate-pulse-glow text-lg">
             QUERO APROVEITAR O DESCONTO →
-          </a>
+          </button>
 
           <p className="text-secondary-foreground/50 text-xs mt-4">
             Pagamento 100% seguro • Satisfação garantida por 7 dias

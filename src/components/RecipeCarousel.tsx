@@ -14,7 +14,9 @@ import geleia from "@/assets/images/geleia.jpg";
 import cocada from "@/assets/images/cocada.jpg";
 import quindim from "@/assets/images/quindim.jpg";
 
-const CTA_LINK = "https://ggcheckout.app/checkout/v2/vvGdsvJyn6wBQsx56aQZ";
+const scrollToOffer = () => {
+  document.getElementById("oferta-principal")?.scrollIntoView({ behavior: "smooth" });
+};
 
 const recipeCards = [
   { name: "Brownie", img: brownie },
@@ -105,9 +107,9 @@ const RecipeCarousel = () => {
         </div>
 
         <div className="text-center mt-12">
-          <a href={CTA_LINK} className="cta-button">
+          <button onClick={scrollToOffer} className="cta-button">
             QUERO APROVEITAR O DESCONTO →
-          </a>
+          </button>
         </div>
       </div>
     </section>

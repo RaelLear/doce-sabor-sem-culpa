@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Check, Shield, Zap, Clock } from "lucide-react";
 import { useState, useEffect } from "react";
 
-const CTA_LINK = "https://ggcheckout.app/checkout/v2/vvGdsvJyn6wBQsx56aQZ";
+const CTA_LINK = "https://ggcheckout.app/checkout/v3/vvGdsvJyn6wBQsx56aQZ";
 
 const items = [
   "+300 receitas de sobremesas zero",
@@ -50,7 +50,7 @@ const CountdownTimer = () => {
 
 const PricingSection = () => {
   return (
-    <section id="cta" className="section-padding bg-muted">
+    <section id="oferta-principal" className="section-padding bg-muted">
       <div className="max-w-xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
